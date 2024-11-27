@@ -7,7 +7,7 @@ import DeleteConfirmModal from "../components/DeleteConfirmModal";
 import BlogEditModal from "../components/BlogEditModal";
 import Logout from "../components/Logout";
 import AddBlogModal from "../components/AddBlogModel";
-const APIURL = import.meta.env.VITE_APIURL;
+const APIURL = import.meta.env.VITE_APIURL || "https://vrv-backend-assignment-production.up.railway.app";
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [showModal, setShowModal] = useState(false);

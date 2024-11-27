@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import axios from "axios";
-const APIURL = import.meta.env.VITE_APIURL;
+const APIURL = import.meta.env.VITE_APIURL || "https://vrv-backend-assignment-production.up.railway.app";
 function BlogEditModal({ show, handleClose, selectedBlog, updateBlogList }) {
   const [title, setTitle] = useState(selectedBlog?.title || "");
   const [content, setContent] = useState(selectedBlog?.content || "");

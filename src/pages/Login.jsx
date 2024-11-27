@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-const APIURL = import.meta.env.VITE_APIURL;
+const APIURL = import.meta.env.VITE_APIURL || "https://vrv-backend-assignment-production.up.railway.app";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");

@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 
-const URL = import.meta.env.VITE_APIURL;
+const APIURL = import.meta.env.VITE_APIURL || "https://vrv-backend-assignment-production.up.railway.app";
 
 function AddBlogModal({ show, handleClose, addNewBlog }) {
   const [title, setTitle] = useState("");
@@ -18,7 +18,7 @@ function AddBlogModal({ show, handleClose, addNewBlog }) {
 
     try {
       const response = await axios.post(
-        `${URL}/api/v1/blog`,
+        `${APIURL}/api/v1/blog`,
         { title, content },
         {
           headers: {
