@@ -11,6 +11,18 @@ https://github.com/saran-mani/vrv-frontend-assignment.git
 **BACKENDEND GITHUB:**
 https://github.com/saran-mani/vrv-backend-assignment.git
 
+## Credentials For testing
+- user
+  `email : user@gmail.com`
+  `password : user1234`
+- admin
+  `email : admin@gmail.com`
+  `password : admin1234`
+- moderator
+  `email : moderator@gmail.com`
+  `password : moderator1234`
+
+
 ## Security Measures 
 
 ### Frontend Security
