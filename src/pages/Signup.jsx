@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-const URL = import.meta.env.VITE_URL;
+const APIURL = import.meta.env.VITE_APIURL;
 
 const SignUpPage = () => {
   const [name, setName] = useState("");
@@ -21,7 +21,7 @@ const SignUpPage = () => {
     }
 
     try {
-      const response = await axios.post(`${URL}/api/v1/user/auth/sign_up`, {
+      const response = await axios.post(`${APIURL}/api/v1/user/auth/sign_up`, {
         name,
         email,
         password,

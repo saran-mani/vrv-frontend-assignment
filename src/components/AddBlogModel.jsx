@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 
-const URL = import.meta.env.VITE_URL;
+const URL = import.meta.env.VITE_APIURL;
 
 function AddBlogModal({ show, handleClose, addNewBlog }) {
   const [title, setTitle] = useState("");

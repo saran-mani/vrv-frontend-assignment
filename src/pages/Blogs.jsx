@@ -7,7 +7,7 @@ import DeleteConfirmModal from "../components/DeleteConfirmModal";
 import BlogEditModal from "../components/BlogEditModal";
 import Logout from "../components/Logout";
 import AddBlogModal from "../components/AddBlogModel";
-const URL = import.meta.env.VITE_URL;
+const APIURL = import.meta.env.VITE_APIURL;
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +18,7 @@ function Blogs() {
   const fetchBlogs = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await axios.get(`${URL}/api/v1/blog`, {
+      const response = await axios.get(`${APIURL}/api/v1/blog`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -56,7 +56,7 @@ function Blogs() {
     const token = localStorage.getItem("token");
     try {
       const response = await axios.delete(
-        `${URL}/api/v1/blog/${selectedBlog._id}`,
+        `${APIURL}/api/v1/blog/${selectedBlog._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

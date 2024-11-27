@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useState } from "react";
 import axios from "axios";
-const URL = import.meta.env.VITE_URL;
+const APIURL = import.meta.env.VITE_APIURL;
 function BlogEditModal({ show, handleClose, selectedBlog, updateBlogList }) {
   const [title, setTitle] = useState(selectedBlog?.title || "");
   const [content, setContent] = useState(selectedBlog?.content || "");
@@ -16,7 +16,7 @@ function BlogEditModal({ show, handleClose, selectedBlog, updateBlogList }) {
 
     try {
       const response = await axios.patch(
-        `${URL}/api/v1/blog/${selectedBlog._id}`,
+        `${APIURL}/api/v1/blog/${selectedBlog._id}`,
         { title, content },
         {
           headers: {
